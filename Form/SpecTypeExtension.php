@@ -44,6 +44,14 @@ class SpecTypeExtension extends AbstractTypeExtension
         return FormType::class;
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public static function getExtendedTypes(): iterable
+    {
+        return [FormType::class];
+    }
+
     private function getTransformer($transformer, $specClass, array $specOptions)
     {
         if ($transformer === 'string') {
